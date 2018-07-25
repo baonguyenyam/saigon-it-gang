@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>We are SIG</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=greek" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/saigonitgang.css">
+</head>
+<body>
+<!--=================================================
+                       Header
+==================================================-->
+<header>
+    <!-- Site Logo -->
+    <div class="logo fadein1">
+            <a href="index.html" title="touch photo">
+                <img src="img/logo.png" alt="logo">
+                <div class="logo-text-wrapper">
+                    <div class="logo-header">SAI GON</div>
+                    <div class="logo-text">INFORMATION TECHNOLOGY GANG</div>
+                </div>
+            </a>
+        </div>
+
+    <nav class="fadein2">
+        <a href="grid.html" class="grid"></a>
+        <a href="index.html" class="sphere"></a>
+        <a href="#" id="menu" class="menu"><span id="menu-title" class="active">Menu</span>
+            <span id="icon-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+            </span>
+        </a>
+
+        <!-- Template Nav -->
+        <ul id="sub-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+<!--=================================================
+                       Content
+==================================================-->
+<section class="main-wrapper home-wrapper">
+    <div id="app-container"></div>
+</section>
+<!--=================================================
+                       Footer
+==================================================-->
+<footer>
+    <div class="copy fadein3">&#169; by saigonitgang</div>
+
+    <!-- Share Buttons -->
+    <div class="share fadein4">
+        <a href="https://www.facebook.com/pham.nguyen.bao.nguyen"><i class="fa fa-facebook"></i></a>
+        <a href="https://fullstackvietnam.com/"><i class="fa fa-link"></i></a>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/saigonitgang/menu.js"></script>
+<script src="js/saigonitgang/vendor.min.js"></script>
+<script src="js/saigonitgang/saigonitgang.js"></script>
+<script src="js/saigonitgang/images.js"></script>
+<script src="js/saigonitgang/redirector.js"></script>
+<script>
+    var gallery = new App('app-container', {
+        "control": "fly",
+        "controlOptions": {
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        "clickable": true,
+        "animate": true,
+        "transparency": 0
+    });
+    // Get range
+    var gridImages = gallery.getRange(1, 3, touchPhotoImages);
+    // Show gallery
+    gallery.createFigure('grid', gridImages, {"fitHeightOnly": true, "border": 1});
+</script>
+</body>
+</html>
